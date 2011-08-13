@@ -35,7 +35,7 @@ int main(int argc,char**argv){
 			}
 		}
 		glBegin(GL_POINTS);
-		for(int i=0;i<512;i++)
+		for(int i=48;i<512;i++)
 			for(int j=0;j<512;j++)
 				if(rv[i<<6|j>>3]&(1<<(j&7)))glVertex2i(256-(i>>1)+(i*j)/512,i);
 		glEnd();
