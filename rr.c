@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <stdio.h>
 int main(int argc,char**argv){
 	Display*dpy=XOpenDisplay(0);
 	XVisualInfo*vi=glXChooseVisual(dpy,DefaultScreen(dpy),(int[]){GLX_RGBA,GLX_DOUBLEBUFFER,None});
@@ -14,7 +13,6 @@ int main(int argc,char**argv){
 	glOrtho(0,511,511,0,1,-1);
 	glColor3ub(255,255,255);
 	restart:;
-	printf("!\n");
 	int mx,my,bias=256;
 	unsigned char rv[32768]={},g;
 	for(int i=512;i>=0;i--){
